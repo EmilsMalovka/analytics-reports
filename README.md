@@ -1,13 +1,13 @@
-
 Retrieve data from Google Analytics
 =================
-[![Latest Stable Version](https://poser.pugx.org/EmilsMalovka/analytics-reports/version.png)](https://packagist.org/packages/EmilsMalovka/analytics-reports)
-[![Total Downloads](https://poser.pugx.org/EmilsMalovka/analytics-reports/downloads.svg)](https://packagist.org/packages/EmilsMalovka/analytics-reports)
-[![License](https://poser.pugx.org/EmilsMalovka/analytics-reports/license.png)](https://packagist.org/packages/EmilsMalovka/analytics-reports)
+[![Latest Stable Version](https://poser.pugx.org/spatie/analytics-reports/version.png)](https://packagist.org/packages/spatie/analytics-reports)
+[![Total Downloads](https://poser.pugx.org/spatie/analytics-reports/downloads.svg)](https://packagist.org/packages/spatie/analytics-reports)
+[![License](https://poser.pugx.org/spatie/analytics-reports/license.png)](https://packagist.org/packages/spatie/analytics-reports)
 
 
-THIS IS NOT MY PACKAGE. I JUST CUSTOMIZED IT TO USE FOR MY OWN NEEDS.
-ORIGINAL PACKAGE: https://github.com/spatie/analytics-reports
+THIS IS NOT MY PACKAGE. ORIGINAL PACKAGE IS HERE:
+https://github.com/spatie/analytics-reports
+
 
 This is an opinionated Laravel 4 package to retrieve Google Analytics data. 
 
@@ -21,7 +21,7 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 This package can be installed through Composer. 
 
 ```
-composer require EmilsMalovka/analytics-reports
+composer require spatie/analytics-reports
 ```
 
 You must install this service provider.
@@ -32,7 +32,7 @@ You must install this service provider.
 
 'providers' => [
     '...',
-    'EmilsMalovka\AnalyticsReports\AnalyticsReportsServiceProvider'
+    'Spatie\AnalyticsReports\AnalyticsReportsServiceProvider'
 ];
 ```
 
@@ -44,8 +44,8 @@ This package also comes with a facade, which provides an easy way to call the th
 // app/config/app.php
 
 'aliases' => array(
-	...
-	'AnalyticsReports' => 'EmilsMalovka\AnalyticsReports\AnalyticsReportsFacade',
+    ...
+    'AnalyticsReports' => 'Spatie\AnalyticsReports\AnalyticsReportsFacade',
 )
 ```
 
@@ -56,21 +56,21 @@ Although the composer.json of this package specifies that "google/apiclient" AND
     ...
         "google/apiclient" : "1.1.*",
         "thujohn/analytics": "dev-master",
-	...
-	}
+    ...
+    }
 }
 ```
 
 You can publish the config file of the package using artisan
 
 ```bash
-php artisan config:publish EmilsMalovka/analytics-reports
+php artisan config:publish spatie/analytics-reports
 ```
 After the config file has been published you'll manually have to move it to your app's config-folder. (Hopefully this step won't be necessary in a next version)
 
 To move the config file copy the ```config.php``` file from 
 ```
-/app/config/packages/EmilsMalovka/analytics-reports/
+/app/config/packages/spatie/analytics-reports/
 ```
 
 and paste it to your ```/app/config``` folder and rename it to ```analyticsReports.php```
@@ -252,5 +252,5 @@ To perform all other GA queries use  ```performQuery```.  [Google's Core Reporti
     public function getSiteIdByUrl($url)
 ```           
 
-## About EmilsMalovka
-EmilsMalovka is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://EmilsMalovka.be/opensource).
+## About Spatie
+Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
